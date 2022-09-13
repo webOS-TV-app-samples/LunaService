@@ -1,3 +1,12 @@
+# Luna Service
+This sample shows how to call luna service APIs using [service.request()](https://webostv.developer.lge.com/develop/references/webostvjs-webos#request) method in webOSTV.js library. This sample calls the following luna service APIs.
+- [TV Device Information](https://webostv.developer.lge.com/develop/references/tv-device-information)
+- [Settings Service](https://webostv.developer.lge.com/develop/references/settings-service)
+- [System Service](https://webostv.developer.lge.com/develop/references/system-service)
+
+## Calling luna service
+Here is the sample code for how to call luna service using webOSTV.js library.
+```javascript
 function getWebOSSystemTime(handleFunc, subscribe) {
   return webOS.service.request("luna://com.palm.systemservice", {
     method: "time/getSystemTime",
@@ -7,7 +16,6 @@ function getWebOSSystemTime(handleFunc, subscribe) {
         console.log("Failed to subscribe the system time information");
         return;
       }
-
       console.log("Result: " + JSON.stringify(inResponse));
       handleFunc(inResponse);
     },
@@ -19,3 +27,4 @@ function getWebOSSystemTime(handleFunc, subscribe) {
     },
   });
 }
+```

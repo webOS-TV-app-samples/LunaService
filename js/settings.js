@@ -1,4 +1,3 @@
-// ref: https://webostv.developer.lge.com/api/webos-service-api/settings-service/
 function monitorSettingsChange(category, keys, handleFunc) {
   var parameters;
   if (category) {
