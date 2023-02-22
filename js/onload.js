@@ -3,14 +3,6 @@
 
   window.addEventListener("load", function (event) {
     console.log("OnLoad");
-    var rule = findCssRule("div");
-    if (rule) {
-      if (this.window.innerHeight < 1080) {
-        rule.style["font-size"] = "10px";
-      } else {
-        rule.style["font-size"] = "18px";
-      }
-    }
     getWebOSDeviceInfo(
       ["modelName", "boardType", "firmwareVersion", "UHD", "sdkVersion"],
       handleDeviceInfo
